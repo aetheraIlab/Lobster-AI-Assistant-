@@ -1,0 +1,28 @@
+[project]
+name = "lobster-assistant"
+version = "0.1.0"
+description = "A private, local-first personal AI assistant with chat and voice connectors."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Local Owner" }]
+dependencies = []
+
+[project.optional-dependencies]
+discord = ["discord.py>=2.4.0"]
+slack = ["slack-bolt>=1.20.0"]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+lobster = "lobster_assistant.cli:main"
+
+[build-system]
+requires = ["setuptools>=69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["lobster_assistant*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

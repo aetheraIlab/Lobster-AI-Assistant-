@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lobster Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="chat" aria-label="Assistant chat">
+        <header class="topbar">
+          <div>
+            <h1>Lobster Assistant</h1>
+            <p>Local, private, and ready.</p>
+          </div>
+          <div class="status" id="status">Awake</div>
+        </header>
+        <div class="messages" id="messages" aria-live="polite"></div>
+        <form class="composer" id="composer">
+          <button class="icon" id="talk" type="button" title="Talk">Mic</button>
+          <input id="text" name="text" autocomplete="off" placeholder="Message your assistant" />
+          <button class="send" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
